@@ -254,7 +254,7 @@ void Eeprom::readMenu(String titles[], uint8_t pids[]){
   }while(address < eepromLength && readByteFromEeprom != 0xFF && titleCount < MENUSIZE);
 }
 
-//Ccheck if there are differences between the default values and the values in the eeprom
+//check if there are differences between the default values and the values in the eeprom
 bool Eeprom::diff(const String defaultTitles[],const String storedTitles[],const uint8_t defaultPids[],const uint8_t storedPids[]){
   bool returnvalue = false;
   for (uint8_t i = 0; i < MENUSIZE && !returnvalue; i++){
